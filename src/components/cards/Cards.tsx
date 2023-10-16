@@ -1,9 +1,11 @@
 const Cards = ({ numberOfCards }: any) => {
     return (
-      <div className="grid grid-cols-3 m-60 justify-center mt-11">
+        <div className=" flex w-full justify-center align-middle items-center">
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 align-middle gap-4 justify-center mt-11">
         {Array.from({ length: numberOfCards }).map((_, index) => (
           <div
-            key={index}
+          key={index}
             className={`w-80 p-4 py-6 border-2 rounded-3xl border-gray-300 mb-6 ${
               index === numberOfCards - 1 ? "bg-green-100" : ""
             }`}
@@ -27,6 +29,7 @@ const Cards = ({ numberOfCards }: any) => {
           </div>
         ))}
       </div>
+                </div>
     );
   };
   export default Cards;
